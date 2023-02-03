@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SignumWeb | Acessibilidade comunicativa entre empresas e pessoas surdas.</title>
+    <!--Bootstrap 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- favicon CSS -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alice" rel="stylesheet">
+    <!-- custom fonts -->
+    <link href="./fonts/aileron.css" rel="stylesheet">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="./css/plugins.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./css/app.css">
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--<script src ='js/video.js'></script>-->
+    <!--<script src="js/jquery.ladyloadxt.extra.js"></script>-->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '544273414052354');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" src="https://www.facebook.com/tr?id=544273414052354&ev=PageView
+    &noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+
+<body class="" data-spy="scroll" data-target="#navbar-nav">
+
+    <div class="main">
+        <header style="padding-top: 20px;" class="navbar navbar-sticky navbar-expand-lg navbar-dark">
+            <div class="container position-relative">
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-inner">
+                    <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <nav>
+                        <ul class="navbar-nav" id="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sobre.html">Sobre nós</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="empresa.html">Sua empresa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="o-que-fazemos.html">O que fazemos?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="interprete.html">Intérprete</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://blog.signumweb.com.br/" target="_blank">Nosso Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contato.html">Contato</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="flex-row ml-lg-auto d-md-flex mr-70 mr-lg-0 d-none d-sm-inline-block">
+                    <a href="https://app.signumweb.com.br/user/login" target="_blank"
+                        class="btn rounded-full btn--outline btn--sm btn-3d-hover btn-splash-hover ">
+                        <span class="btn__text">Login</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <section style="background-color: #0A9CCF;" class="space-bottom hero hero--dark hidden">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-12 col-md-10 col-lg-8 col-xl-6 mx-auto">
+                        <div class="position-relative text-left">
+                            <div class="hero-content">
+                                <h1 style="font-size: 42px; text-align: left" class="hero__title">Sua empresa acessível
+                                    para 10 milhões de surdos, alcançando consequentemente seus familiares e
+                                    simpatizantes da causa.</h1>
+                                <span style="margin-bottom:30px; font-size: 22px; text-align: left">Com um simples
+                                    clique a nossa plataforma ajuda a sua empresa a se comunicar com clientes ou
+                                    empregados surdos.</span>
+                                <!-- Botão de acessibilidade -->
+                                <div style="margin-bottom: 40px;" class="d-flex justify-content-between ml-auto">
+                                    <div class="lang-selector mr-30 position-relative">
+
+                                        <button onclick="ShowHide('ct1')" class="lang-selector__button" type="button">
+                                            <img style="width: 40px;" src="img/azul.png" alt="" class="">
+                                        </button>
+
+                                        <!-- Intérprete -->
+                                        <ul id="ct1" class="lang-dropdown mb-0" style="display: none;">
+                                            <picture>
+                                                <div id="iframeInterprete-ct1">
+
+                                                </div>
+                                            </picture>
+                                        </ul>
+                                        <!-- end Intérprete-->
+                                    </div>
+                                </div>
+                                <!-- Botão de acessibilidade -->
+                            </div>
+                            <a style="background: #27AE60; color: #fff;" href="contato.html"
+                                class="btn rounded-full btn--outline btn--sm btn-3d-hover btn-splash-hover ">
+                                <span class="btn__text">Fale conosco</span></a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-12 col-md-10 col-lg-8 col-xl-6 mx-auto">
+                        <div class="position-relative">
+                            <picture><img class="rounded-default" src="img/felipe.png" alt="Record Minas"></picture>
+                            <a class="lightbox pos-center media-player-icon media-player-icon--md media-player-icon--fill-primary btn-splash-hover"
+                                data-autoplay="true" data-vbtype="video"
+                                href="https://www.youtube.com/watch?v=iq0B9Fj2Ezs&feature=youtu.be"><i
+                                    class="icon icon-triangle-right-17"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+    </section>
+
+
+    <section class="space-top" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-10 col-lg-7 col-xl-6 mx-auto">
+                    <div class="section-title reveal text-center mb-80">
+                        <h3 style="font-size: 48px;" class="font-w-600">SignumWeb na Mídia</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="space">
+        <div class="container">
+            <div class="row">
+
+                <div style="margin-bottom: 20px;" class="col-12 col-md-9 col-lg-6 ml-lg-auto reveal">
+                    <div class="position-relative">
+                        <picture><img class="rounded-default" src="img/midia/1.webp" alt="Record Minas"></picture>
+                        <a class="lightbox pos-center media-player-icon media-player-icon--md media-player-icon--fill-primary btn-splash-hover"
+                            data-autoplay="true" data-vbtype="video"
+                            href="https://www.youtube.com/watch?v=rCL7Eqw4H34&feature=youtu.be"><i
+                                class="icon icon-triangle-right-17"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;" class="col-12 col-md-9 col-lg-6 ml-lg-auto reveal">
+                    <div class="position-relative">
+                        <picture><img class="rounded-default" src="img/midia/2.webp" alt="Globo Minas"></picture>
+                        <a class="lightbox pos-center media-player-icon media-player-icon--md media-player-icon--fill-primary btn-splash-hover"
+                            data-autoplay="true" data-vbtype="video"
+                            href="https://www.youtube.com/watch?v=xINPNZkAr-0&feature=youtu.be"><i
+                                class="icon icon-triangle-right-17"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;" class="col-12 col-md-9 col-lg-6 ml-lg-auto reveal">
+                    <div class="position-relative">
+                        <picture><img class="rounded-default" src="img/midia/3.webp"
+                                alt="Vídeo onde um intérprete de Libras explica sobre a SignumWeb. Ele está usando camisa preta e o fundo é azul, com a logomarca da SignumWeb no canto esquerdo.">
+                        </picture>
+                        <a class="lightbox pos-center media-player-icon media-player-icon--md media-player-icon--fill-primary btn-splash-hover"
+                            data-autoplay="true" data-vbtype="video" href="https://youtu.be/7CYbNAug1X4"><i
+                                class="icon icon-triangle-right-17"></i>
+                            <!--https://www.youtube.com/watch?v=n_-YwZqPPYw-->
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-9 col-lg-6 ml-lg-auto reveal">
+                    <div class="position-relative">
+                        <picture><img class="rounded-default" src="img/midia/4.webp"
+                                alt="Vídeo onde um intérprete de Libras explica sobre a SignumWeb. Ele está usando camisa preta e o fundo é azul, com a logomarca da SignumWeb no canto esquerdo.">
+                        </picture>
+                        <a class="lightbox pos-center media-player-icon media-player-icon--md media-player-icon--fill-primary btn-splash-hover"
+                            data-autoplay="true" data-vbtype="video"
+                            href="https://www.youtube.com/watch?v=2r740HhoXWo&t=173s"><i
+                                class="icon icon-triangle-right-17"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="space">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-10 col-lg-7 col-xl-6 mx-auto">
+                    <div class="section-title reveal text-center mb-80">
+                        <h3 style="font-size: 48px;" class="font-w-600">Motivos para usar a SignumWeb</h3>
+                        <p>A partir de R$ 284,00 seu negócio já será acessível ao surdo. Fale com um dos nossos
+                            especialistas.</p>
+                        <!-- Botão de acessibilidade -->
+                        <div style="margin-bottom: 40px;" class="d-flex justify-content-between ml-auto">
+                            <div class="lang-selector mr-30 position-relative">
+
+                                <button onclick="ShowHide('ct2')" class="lang-selector__button" type="button">
+                                    <img style="width: 40px;" src="img/libras.png" alt="" class="">
+                                </button>
+
+                                <!-- Intérprete -->
+                                <ul id="ct2" class="lang-dropdown mb-0" style="display: none;">
+                                    <picture>
+                                        <div id="iframeInterprete-ct2"></div>
+
+                                    </picture>
+                                </ul>
+                                <!-- end Intérprete-->
+                            </div>
+                        </div>
+                        <!-- Botão de acessibilidade -->
+                    </div>
+                    <!-- end of section title -->
+                </div>
+                <!-- end of col -->
+            </div>
+            <!-- end of row -->
+            <div class="row d-lg-flex flex-column-reverse flex-lg-row align-items-center reveal">
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+
+                    <div class="features mb-30 mb-lg-40">
+                        <div class="d-flex align-items-center mb-12">
+                            <h5 style="font-size: 24px;">Alcançar um nicho de mercado até agora desconhecido.</h5>
+                        </div>
+                        <p style="text-align: justify">Os surdos viveram séculos de exclusão social, com todos os seus
+                            direitos cerceados. Hoje essa comunidade já tem sua língua e seus direitos reconhecidos. Por
+                            isso estudam, casam-se, trabalham, consumem, como qualquer outro cidadão. Mas ainda fazem
+                            isso sem a autonomia e a liberdade que desejam.
+                            Seja pioneiro em reconhecer e oferecer livre acesso desses cidadãos à sua empresa, para
+                            trabalhar ou consumir seus produtos e serviços.
+                        </p>
+                        <!-- Botão de acessibilidade -->
+                        <div style="margin-bottom: 40px;" class="d-flex justify-content-between ml-auto">
+                            <div class="lang-selector mr-30 position-relative">
+
+                                <button onclick="ShowHide('ct3')" class="lang-selector__button" type="button">
+                                    <img style="width: 40px;" src="img/libras.png" alt="" class="">
+                                </button>
+                                <!-- Intérprete -->
+                                <ul id="ct3" class="lang-dropdown mb-0" style="display: none;">
+                                    <picture>
+                                        <div id="iframeInterprete-ct3"></div>
+
+                                    </picture>
+                                </ul>
+                                <!-- end Intérprete-->
+                            </div>
+                        </div>
+                        <!-- Botão de acessibilidade -->
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+
+                    <div class="features mb-30 mb-lg-40">
+                        <div class="d-flex align-items-center mb-12">
+                            <h5 style="font-size: 24px;">Ser reconhecido como socialmente responsável.</h5>
+                        </div>
+                        <p style="text-align: justify">O conceito de responsabilidade social vem sendo buscado pelas
+                            empresas, desde que entenderam que isso fortalece a imagem, gera empatia e aumenta a
+                            fidelidade dos clientes.
+                            A questão relacionada com acessibilidade de pessoas com deficiência é muito discutida e
+                            defendida por todo o mundo, mas com relação à surdez ainda gera dúvidas, porque não se trata
+                            de barreiras físicas, facilmente visíveis, mas de acessibilidade na área da comunicação. A
+                            SignumWeb chegou para ajudar.
+                        </p>
+                        <!-- Botão de acessibilidade -->
+                        <div style="margin-bottom: 40px;" class="d-flex justify-content-between ml-auto">
+                            <div class="lang-selector mr-30 position-relative">
+
+                                <button onclick="ShowHide('ct4')" class="lang-selector__button" type="button">
+                                    <img style="width: 40px;" src="img/libras.png" alt="" class="">
+                                </button>
+
+                                <!-- Intérprete -->
+                                <ul id="ct4" class="lang-dropdown mb-0" style="display: none;">
+                                    <picture>
+                                        <div id="iframeInterprete-ct4"></div>
+
+                                    </picture>
+                                </ul>
+                                <!-- end Intérprete-->
+                            </div>
+                        </div>
+                        <!-- Botão de acessibilidade -->
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                    <div class="features mb-30 mb-lg-40">
+                        <div class="d-flex align-items-center mb-12">
+                            <h5 style="font-size: 24px;">Cumprir a lei</h5>
+                        </div>
+                        <p style="text-align: justify">Desde que os direitos da pessoa com deficiência foram
+                            reconhecidos por lei, ficou estabelecido, entre outras coisas, que as empresas públicas e
+                            concessionárias de serviços públicos são obrigadas a promover acessibilidade comunicativa
+                            para os surdos. Com relação às empresas privadas, elas devem empreender esforços para se
+                            adequarem a essa realidade
+                        </p>
+                        <!-- Botão de acessibilidade -->
+                        <div style="margin-bottom: 40px;" class="d-flex justify-content-between ml-auto">
+                            <div class="lang-selector mr-30 position-relative">
+
+                                <button onclick="ShowHide('ct5')" class="lang-selector__button" type="button">
+                                    <img style="width: 40px;" src="img/libras.png" alt="" class="">
+                                </button>
+
+                                <!-- Intérprete -->
+                                <ul id="ct5" class="lang-dropdown mb-0" style="display: none;">
+                                    <picture>
+                                        <div id="iframeInterprete-ct5"></div>
+
+                                    </picture>
+                                </ul>
+                                <!-- end Intérprete-->
+                            </div>
+                        </div>
+                        <!-- Botão de acessibilidade -->
+                        <span style="margin-top: 10px; font-weight: bold">Conheças as leis:</span>
+                        <p><a href="http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm"
+                                target="_blank">LBI</a></p>
+                        <p><a href="https://presrepublica.jusbrasil.com.br/legislacao/99492/lei-de-libras-lei-10436-02"
+                                target="_blank">LEI</a></p>
+                        <p><a href="http://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2004/Decreto/D5296.htm"
+                                target="_blank">DECRETO</a></p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center">
+                <a style="background-color: #0A9CCF; color: #fff;" href="/contato.html"
+                    class="btn rounded-full btn--outline btn--sm btn-3d-hover btn-splash-hover ">
+                    <span class="btn__text">Podemos te ajudar</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #f2f2f2;;" class="space bg-color-grey position-relative">
+        <div class="container">
+            <div style="margin-bottom: 60px; text-align: center;">
+                <h3 style="font-size: 48px; color: #2c2e30;" class="mb-20 font-w-600">O que falam de nós?</h3>
+                <!-- Botão de acessibilidade -->
+                <div class="d-flex justify-content-between ml-auto">
+                    <div class="lang-selector mr-30 position-relative">
+
+                        <button onclick="ShowHide('ct6')" class="lang-selector__button" type="button">
+                            <img style="width: 40px;" src="img/libras.png" alt="United States" class="">
+                        </button>
+
+                        <!-- Intérprete -->
+                        <ul id="ct6" class="lang-dropdown mb-0" style="display: none;">
+                            <div>
+                                <picture>
+                                    <div id="iframeInterprete-ct6"></div>
+
+                                </picture>
+                            </div>
+                        </ul>
+                        <!-- end Intérprete-->
+                    </div>
+                </div>
+                <!-- Botão de acessibilidade -->
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-12 d-flex">
+                    <div class="card mb-20 reveal">
+                        <blockquote class="card-body blockquote pb-30">
+                            <p style="color: #242424;" class="color-light-secondary-2">Gratidão eterna por nos
+                                proporcionar o encontro de almas! Embora os tropeços da falta de intimidade com as
+                                pessoas surdas, a comunicação foi plena e com direito a borboletas no estômago! A
+                                inclusão de surdos no projeto de gastronomia inclusiva será mamão com açucar com ajuda
+                                dessa magnifica ferramenta.</p>
+                            <div style="margin-top: 20px;" class="d-flex justify-content-between ml-auto">
+                                <div class="lang-selector mr-30 position-relative">
+
+                                    <a style="width: 40px;" class="lightbox pos-center vbox-item" data-autoplay="true"
+                                        data-vbtype="video"
+                                        href="https://www.youtube.com/watch?v=rH3aWNweh-s&feature=youtu.be">
+                                        <img src="img/libras.png" alt="Acessibilidade para deficientes auditivo">
+                                    </a>
+
+                                    <a style="width: 40px;" class="lang-selector__button " data-autoplay="true"
+                                        data-vbtype="video" href="https://www.youtube.com/watch?v=aRh_eUQSmIg">
+                                        <img>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </blockquote>
+                        <div class="card-footer d-flex align-items-center">
+                            <span style="width: 50px;" class="mr-10"><img src="img/depoimento/1.webp"
+                                    alt="Debora Cabral, Gastronomia Inclusiva"></span>
+                            <span class="body-font-size font-w-600">Debora Cabral, Gastronomia Inclusiva</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of col -->
+                <div class="col-12 col-md-12 col-lg-12 d-flex">
+                    <div class="card mb-20 reveal">
+                        <blockquote class="card-body blockquote pb-30">
+                            <p style="color: #242424;" class="color-light-secondary-2">“Muito fácil e prático! O
+                                interprete entrou online no celular e o atendimento fluiu sem a dificuldade encontrada
+                                pela limitação imposta pela língua. Nós nos orgulhamos de fazer parte desse história de
+                                superação. Que o mundo perceba a importância de inovar e atender melhor essa parcela da
+                                população. Parabéns SignumWeb. Muito sucesso pra vocês!”.</p>
+                            <div style="margin-top: 20px;" class="d-flex justify-content-between ml-auto">
+                                <div class="lang-selector mr-30 position-relative">
+
+                                    <a style="width: 40px;" class="lightbox pos-center vbox-item" data-autoplay="true"
+                                        data-vbtype="video"
+                                        href="https://www.youtube.com/watch?v=KqzXO7fUf6g&feature=youtu.be">
+                                        <img src="img/libras.png" alt="Acessibilidade para deficientes auditivo">
+                                    </a>
+
+                                    <a style="width: 40px;" class="lang-selector__button " data-autoplay="true"
+                                        data-vbtype="video" href="https://www.youtube.com/watch?v=aRh_eUQSmIg">
+                                        <img>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </blockquote>
+                        <div class="card-footer d-flex align-items-center">
+                            <span style="width: 50px;" class="mr-10"><img src="img/depoimento/2.webp"
+                                    alt="Clarice Junqueira Fisioterapeuta"></span>
+                            <span class="body-font-size font-w-600">Clarice Junqueira Fisioterapeuta</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of col -->
+                <div class="col-12 col-md-12 col-lg-12 d-flex">
+                    <div class="card mb-20 reveal">
+                        <blockquote class="card-body blockquote pb-30">
+                            <p style="color: #242424;" class="color-light-secondary-2">Vou fazer um relato para que
+                                compreendam um pouco da minha vivência com a SignumWeb.
+                                Realizei atendimentos a um paciente com transtorno mental grave, em surto psicótico, com
+                                alguns momentos de agressividade. A família estava discutindo uma possível internação
+                                psiquiátrica. Foi percebido que a garantia do acesso ao seu direito - atendimento em
+                                saúde inclusivo - possibilitou ao paciente:
+                                • Liberdade para expressar seus pensamentos, onde ele relatou estar mais à vontade na
+                                presença do intérprete, o que possibilitou compreender melhor o seu tratamento.
+                                • Comunicar sobre sua rotina, crenças, necessidades, dúvidas em relação ao tratamento
+                                medicamentoso, saudade de familiares já falecidos; críticas à falta de acessibilidade na
+                                sociedade, dentre outros assuntos;
+                                • Ele ressaltou muitas vezes que "tinha vontades e queria expressar, mas ninguém
+                                entendia"; "não queria mais ficar confuso sobre si"
+                                Trago estes relatos para que possam perceber a relevância dos atendimentos com
+                                intérprete. Ressalto, só foi possível conhecer o paciente, seus desejos e propor um
+                                plano terapêutico porque tivemos ajuda do intérprete online da SignumWeb, para a
+                                comunicação. Neste caso em específico, houve melhora significativa do paciente. Ele
+                                segue em acompanhamento e não internou, manteve durante este período com o quadro de
+                                saúde mais estável.
+
+
+                            </p>
+                            <div style="margin-top: 20px;" class="d-flex justify-content-between ml-auto">
+                                <div class="lang-selector mr-30 position-relative">
+
+                                    <a style="width: 40px;" class="lightbox pos-center vbox-item" data-autoplay="true"
+                                        data-vbtype="video"
+                                        href="https://www.youtube.com/watch?v=YSHR5ZOL-FM&feature=youtu.be">
+                                        <img src="img/libras.png" alt="Acessibilidade para deficientes auditivo">
+                                    </a>
+
+                                    <a style="width: 40px;" class="lang-selector__button " data-autoplay="true"
+                                        data-vbtype="video" href="https://www.youtube.com/watch?v=aRh_eUQSmIg">
+                                        <img>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </blockquote>
+                        <div class="card-footer d-flex align-items-center">
+                            <span style="width: 50px;" class="mr-10"><img src="img/depoimento/3.webp"
+                                    alt="Josenildo"></span>
+                            <span class="body-font-size font-w-600">Gisele.S - Terapeuta Ocupacional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 style="margin-top: 30px; margin-top: 30px; text-align: center; font-size: 28px; color: #54565a;"
+                class="mb-20 font-w-600">Vamos juntos tornar o mundo mais acessível?</h3>
+
+            <div style="margin-top: 20px; text-align: center">
+                <a style="background-color: #0A9CCF; color: #fff;" href="/contato.html"
+                    class="btn rounded-full btn--outline btn--sm btn-3d-hover btn-splash-hover ">
+                    <span class="btn__text">Clique aqui</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #ffff" class="bg-color-primary space position-relative" id="reviews">
+
+        <div class="container">
+            <div class="row">
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-center mt-40">
+                        <h3 style="font-size: 48px; color: #2c2e30" class="mb-3 font-w-600">Nossos Clientes</h3>
+                        <!-- Botão de acessibilidade -->
+                        <div class="d-flex justify-content-between ml-auto">
+                            <div class="lang-selector mr-30 position-relative">
+
+                                <button onclick="ShowHide('ct7')" class="lang-selector__button" type="button">
+                                    <img style="width: 40px;" src="img/libras.png" alt="United States" class="">
+                                </button>
+
+                                <!-- Intérprete -->
+                                <ul id="ct7" class="lang-dropdown mb-0" style="display: none;">
+                                    <div>
+                                        <picture>
+                                            <div id="iframeInterprete-ct7"></div>
+
+                                        </picture>
+                                    </div>
+                                </ul>
+                                <!-- end Intérprete-->
+                            </div>
+                        </div>
+                        <!-- Botão de acessibilidade -->
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-100">
+                <div class="col-12 mx-auto d-flex flex-column flex-md-row justify-content-between text-center reveal">
+                    <span class="mb-30 mb-md-0"><img style="width: 80px;" src="img/clientes/bk.webp"
+                            alt="Burguer King"></span>
+                    <span class="mb-30 mb-md-0"><img style="width: 80px;" src="img/clientes/sebrae.webp"
+                            alt="Sebrae Minas"></span>
+                    <span class="mb-30 mb-md-0"><img style="width: 80px;" src="img/clientes/hospital.webp"
+                            alt="Hospital Urologica"></span>
+                    <span class="mb-30 mb-md-0"><img style="width: 120px;" src="img/clientes/drogaria.webp"
+                            alt="Dograria Araújo"></span>
+                    <span class="mb-30 mb-md-0"><img style="width: 120px;" src="img/clientes/rcs.webp" alt="Rcs"></span>
+                    <span class="mb-30 mb-md-0"><img style="width: 120px;" src="img/clientes/apae.webp"
+                            alt="Rcs"></span>
+                </div>
+            </div>
+            <div class="row mt-100">
+                <div class="col-12 mx-auto d-flex flex-column flex-md-row justify-content-between text-center reveal">
+                    <span class="mb-30 mb-md-0"><img style="width: 120px;" src="img/clientes/avulta.webp"
+                            alt="Avulta"></span>
+                    <span class="mb-30 mb-md-0"><img style="width: 120px;" src="img/clientes/rock.webp"
+                            alt="Rock Content"></span>
+                    <span class="mb-30 mb-md-0"><img style="width: 120px;" src="img/clientes/clinica.webp"
+                            alt="Clinica nob"></span>
+                    <span class="mb-30 mb-md-0"><img style="width: 120px;" src="img/clientes/portoalegre.webp"
+                            alt="Prefeitura de Porto Alegre"></span>
+                    <!-- <span class="mb-30 mb-md-0"><img style="width: 120px;" src="img/clientes/rcs.png" alt="Rcs"></span>
+                        <span class="mb-30 mb-md-0"><img style="width: 120px;" src="img/clientes/apae.png" alt="Rcs"></span> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer position-relative">
+        <div class="space border-bottom-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-4 col-lg-3 mb-20 mb-lg-0">
+                        <span class="mb-20">
+                            <a style="width: 100px;" href="https://signumweb.com.br/"><img src="logo.png"
+                                    alt="logo"></a>
+                        </span>
+                        <p>Endereço: Rua Sen. Milton Campos, 35, Andar 4º Vila da Serra, Nova Lima, MG</p>
+
+                        <div class="mt-30 d-flex align-items-start flex-column flex-md-row">
+                            <span class="color-primary mr-20 mt-10 mb-10 mb-md-0"><i class="icon icon-email"></i></span>
+                            <div>
+                                <h6>E-mail</h6>
+                                <a href="contato@signumweb.com.br">
+                                    <p>contato@signumweb.com.br</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <ul class="social-lists d-flex mb-0 mt-30">
+                            <li><a href="https://www.facebook.com/signumweb" target="_blank"><i
+                                        class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/signumweb/" target="_blank"><i
+                                        class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/signumweb/" target="_blank"><i
+                                        class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCKrpg7gwrauRp1syyHfE0XA" target="_blank"><i
+                                        class="fa fa-youtube"></i></a></li>
+                        </ul>
+
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-3 mb-20 mb-sm-0">
+                        <div class="footer-widget">
+                            <h6 class="mb-20">Institucional</h6>
+                            <ul>
+                                <li><a href="sobre.html">Sobre</a></li>
+                                <li><a href="empresa.html">Empresa</a></li>
+                                <li><a href="interprete.html">Intérprete</a></li>
+                                <li><a href="https://blog.signumweb.com.br/" target="_blank">Blog</a></li>
+                                <li><a href="https://app.signumweb.com.br/user/login" target="_blank">Plataforma</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-3 mb-20 mb-sm-0">
+                        <div class="footer-widget">
+                            <h6 class="mb-20">Links Úteis</h6>
+                            <ul>
+                                <li><a href="privacidade.html">Política de privacidade</a></li>
+                                <li><a href="termos.html">Termos de uso</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-3 mb-20 mb-sm-0">
+                        <div class="footer-widget">
+                            <h6 class="mb-20">Apoio e premiação</h6>
+                            <ul>
+                                <img style="width: 80px;" src="img/apoio/inovativa.webp" alt="Inovativa">
+                                <img style="width: 80px;" src="img/apoio/lemonade.webp" alt="lemonade">
+                                <img style="width: 80px;" src="img/apoio/like-boss.webp" alt="Like a Boss">
+                                <img style="width: 80px;" src="img/apoio/premio.webp" alt="Premio">
+                                <img style="width: 80px;" src="img/apoio/sebraetec.webp" alt="sebraetec">
+                                <img style="width: 80px;" src="img/apoio/techmall.webp" alt="techmall">
+                                <img style="width: 80px;" src="img/apoio/fundep.webp" alt="techmall">
+                                <img style="width: 80px;" src="img/apoio/iebt.webp" alt="techmall">
+                                <img style="width: 80px;" src="img/apoio/seed.webp" alt="techmall">
+                                <img style="width: 80px;" src="img/apoio/bh.webp" alt="techmall">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-color-grey py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-md-flex justify-content-between align-items-center">
+                        <nav class="nav">
+                            <ul class="d-flex mb-md-0">
+                                <li>
+                                    <p>&#169 2020 | Todos os Direitos Reservados.</p>
+                                </li>
+                            </ul>
+
+                        </nav>
+
+                        <div class="d-flex justify-content-between ml-auto">
+                            <div class="lang-selector mr-30 position-relative">
+                                <ul class="d-flex mb-md-0">
+                                    <li><a style="color: #888;" href="https://digitalhawk.com.br/"
+                                            target="_blank">Desenvolvido por: <span
+                                                style="font-weight: bold; color:#0A9CCF">Digital Hawk</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script src="./js/plugins.min.js"></script>
+    <script src="./js/app.js"></script>
+
+    <!-- script src="//code.jivosite.com/widget/uIMCYTXddP" async></script -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97417431-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-97417431-5');
+    </script>
+    <!-- RD STATION -->
+    <script type="text/javascript" async
+        src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/cfc1fbde-d586-4bc7-954a-78c3dadded55-loader.js"></script>
+</body>
+
+</html>
